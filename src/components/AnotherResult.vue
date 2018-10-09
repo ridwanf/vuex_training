@@ -8,13 +8,11 @@ export default {
     doubleCounter () {
       return this.$store.getters.doubleCounter
     },
-    
     // you can mix the getters into computed with object spread operator
     // ...mapGetters([
     //   'doubleCounter',
     //   // ...
     // ])
-    
     // if you want to use different name
     // ...mapGetters({
     //   // map `this.counter` to `this.$store.getters.doubleCounter`
