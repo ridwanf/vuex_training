@@ -4,6 +4,8 @@
         <h1>Vuex With Store</h1>
         <app-result></app-result>
         <hr>
+        <app-another-result></app-another-result>        
+        <hr>
         <app-counter></app-counter>
     </div>
 </div>
@@ -11,12 +13,14 @@
 
 <script>
 import Result from '../components/ResultStore.vue'
+import AnotherResult from '../components/AnotherResult.vue'
 import Counter from '../components/CounterStore.vue'
 
 export default {
   components: {
     appResult: Result,
     appCounter: Counter,
+    appAnotherResult: AnotherResult,
   },
 }
 </script>
