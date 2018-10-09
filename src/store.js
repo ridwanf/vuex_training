@@ -8,9 +8,6 @@ export default new Vuex.Store({
     counter: 0,
   },
   getters: {
-    doubleCounter () {
-      return this.state.counter * 2
-    },
   },
   mutations: {
   },
