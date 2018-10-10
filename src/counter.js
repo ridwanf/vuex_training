@@ -23,10 +23,20 @@ const actions = {
   decrement ({commit}) {
     commit('decrement')
   },
+  asyncIncrement: ({commit}) => {
+    setTimeout(() => {
+      commit('increment')
+    }, 1000)
+  },
+  asyncDecrement: ({commit}) => {
+    setTimeout(() => {
+      commit('decrement')
+    }, 1000)
+  },
 }
 
 export default {
-  namespaced: true,
+  // namespaced: true,
   state,
   getters,
   actions,
