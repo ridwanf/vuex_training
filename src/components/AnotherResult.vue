@@ -3,11 +3,12 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 export default {
   computed: {
-    doubleCounter () {
-      return this.$store.getters.doubleCounter
-    },
+    ...mapGetters({
+      doubleCounter: 'counter/doubleCounter',
+    }),
     // you can mix the getters into computed with object spread operator
     // ...mapGetters([
     //   'doubleCounter',

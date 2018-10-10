@@ -21,16 +21,16 @@
 export default {
   methods: {
     increment () {
-      this.$store.dispatch('increment')
+      this.$store.dispatch('counter/increment')
     },
     decrement () {
-      this.$store.dispatch('decrement')
+      this.$store.dispatch('counter/decrement')
     },
     asyncIncrement () {
-      this.$store.dispatch('asyncIncrement')
+      this.$store.dispatch('counter/asyncIncrement')
     },
     asyncDecrement () {
-      this.$store.dispatch('asyncDecrement')
+      this.$store.dispatch('counter/asyncDecrement')
     },
     // ...mapActions([
     //   'increment', // map `this.increment()` to `this.$store.dispatch('increment')`
