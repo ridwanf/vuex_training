@@ -1,7 +1,19 @@
 <template>
     <div>
+      <div>
+        <span>Sync</span>
+        <br>
         <button class="btn btn-primary" @click="increment">Increment</button>
-        <button class="btn btn-primary" @click="decrement">Decrement</button>
+        <button class="btn btn-primary" @click="decrement">Decrement</button>   
+      </div>
+      <hr>
+       <div>
+        <span>Async</span>
+        <br>
+        <button class="btn btn-primary" @click="asyncIncrement">Async Increment</button>
+        <button class="btn btn-primary" @click="asyncDecrement">Async Decrement</button>
+       </div>
+
     </div>
 </template>
 
@@ -9,21 +21,25 @@
 export default {
   methods: {
     increment () {
-      this.$store.commit('increment')
+      this.$store.dispatch('increment')
     },
     decrement () {
-      this.$store.commit('decrement')
+      this.$store.dispatch('decrement')
     },
-    // example use mapMutations
-    // ...mapMutations([
-    //   'increment', // map `this.increment()` to `this.$store.commit('increment')`
+    asyncIncrement () {
+      this.$store.dispatch('asyncIncrement')
+    },
+    asyncDecrement () {
+      this.$store.dispatch('asyncDecrement')
+    },
+    // ...mapActions([
+    //   'increment', // map `this.increment()` to `this.$store.dispatch('increment')`
 
-    // `mapMutations` also supports payloads:
-    //   'incrementBy' // map `this.incrementBy(amount)` to `this.$store.commit('incrementBy', amount)`
+    //   // `mapActions` also supports payloads:
+    //   'incrementBy' // map `this.incrementBy(amount)` to `this.$store.dispatch('incrementBy', amount)`
     // ]),
-    // use different name
-    // ...mapMutations({
-    //   add: 'increment' // map `this.add()` to `this.$store.commit('increment')`
+    // ...mapActions({
+    //   add: 'increment' // map `this.add()` to `this.$store.dispatch('increment')`
     // })
   },
 }
